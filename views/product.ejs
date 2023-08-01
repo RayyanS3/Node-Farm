@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Megrim|Nunito+Sans:400,900"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/155/ear-of-maize_1f33d.png"
+    />
+
+    <link rel="stylesheet" href="/styles/productStyles.css" />
+    <title><%=product.productName%> <%=product.image%></title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>🌽 Node Farm 🥦</h1>
+
+      <figure class="product">
+        <% if(product.organic == false) { %>
+          <div class="product__organic not-organic"><h5>Organic</h5></div>
+          </h6>
+          <% } else { %>
+            <div class="product__organic"><h5>Organic</h5></div>
+            <% } %>
+        <a href=".." class="product__back">
+          <span class="emoji-left">👈</span>Back
+        </a>
+        <div class="product__hero">
+          <span class="product__emoji product__emoji--1"
+            ><%=product.image%></span
+          >
+          <span class="product__emoji product__emoji--2"
+            ><%=product.image%></span
+          >
+          <span class="product__emoji product__emoji--3"
+            ><%=product.image%></span
+          >
+          <span class="product__emoji product__emoji--4"
+            ><%=product.image%></span
+          >
+          <span class="product__emoji product__emoji--5"
+            ><%=product.image%></span
+          >
+          <span class="product__emoji product__emoji--6"
+            ><%=product.image%></span
+          >
+          <span class="product__emoji product__emoji--7"
+            ><%=product.image%></span
+          >
+          <span class="product__emoji product__emoji--8"
+            ><%=product.image%></span
+          >
+          <span class="product__emoji product__emoji--9"
+            ><%=product.image%></span
+          >
+        </div>
+        <h2 class="product__name"><%=product.productName%></h2>
+        <div class="product__details">
+          <p><span class="emoji-left">🌍 </span>From <%=product.from%></p>
+          <p><span class="emoji-left">❤️ </span><%=product.nutrients%></p>
+          <p><span class="emoji-left">📦 </span><%=product.quantity%></p>
+          <p><span class="emoji-left">🏷 </span><%=product.price%>€</p>
+        </div>
+
+        <a href="#" class="product__link">
+          <span class="emoji-left">🛒</span>
+          <span>Add to shopping cart (<%=product.price%>€)</span>
+        </a>
+
+        <p class="product__description"><%=product.description%></p>
+      </figure>
+    </div>
+  </body>
+</html>
